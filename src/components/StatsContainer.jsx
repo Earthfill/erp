@@ -1,39 +1,81 @@
-import { FaBug, FaCalendarCheck, FaSuitcaseRolling } from "react-icons/fa";
-import { useSelector } from "react-redux"
+import { FaCheck, FaRegQuestionCircle } from "react-icons/fa";
 import StatItem from "./StatItem";
+import { MdPending } from "react-icons/md";
+import { PiX } from "react-icons/pi";
+import { useSelector } from "react-redux";
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import Slider from "react-slick";
 
 const StatsContainer = () => {
-  const { stats } = useSelector((store) => store.allJobs);
+  const { stats } = useSelector((store) => store.leave);
   const defaultStats = [
     {
-      title: 'pending applications',
-      count: stats.pending || 0,
-      icon: <FaSuitcaseRolling />,
-      color: '#E9B949',
-      bcg: '#FCEFC7'
+      title: 'approved',
+      count: stats.approved,
+      icon: <FaCheck />,
+      color: 'green',
+      bcg: '#cdeed5'
     },
     {
-      title: 'interviews scheduled',
-      count: stats.interview || 0,
-      icon: <FaCalendarCheck />,
-      color: '#647ACB',
-      bcg: '#E0E8F9'
+      title: 'pending',
+      count: stats.pending,
+      icon: <MdPending size={50} />,
+      color: '#ffae19',
+      bcg: '#ffffb3'
     },
     {
-      title: 'jobs declined',
-      count: stats.declined || 0,
-      icon: <FaBug />,
-      color: '#D66A6A',
-      bcg: '#FFEEEE'
+      title: 'requests',
+      count: stats.requests,
+      icon: <FaRegQuestionCircle size={50} />,
+      color: 'blue',
+      bcg: '#ccccff'
     },
+    {
+      title: 'declined',
+      count: stats.declined,
+      icon: <PiX size={50} />,
+      color: 'red',
+      bcg: '#ffcccc'
+    }
   ];
 
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   return (
-    <div>
-      {defaultStats.map((item, index) => {
-        return <StatItem key={index} {...item} />
-      })}
-    </div>
+    <>
+      <div className="hidden md:grid md:grid-cols-2 md:gap-5">
+        {defaultStats.map((item, index) => {
+          return <StatItem key={index} {...item} />
+        })}
+      </div>
+
+      <div className="md:hidden w-64 mx-auto mt-5">
+        <Slider {...settings}>
+          {defaultStats.map((item, index) => (
+            <div key={index}>
+              <StatItem {...item} />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </>
   )
 }
 

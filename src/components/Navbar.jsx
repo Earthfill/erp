@@ -38,7 +38,7 @@ const Navbar = () => {
             </div>
           </div>
           <div 
-            className={`bg-purple-200 transition-all duration-300 ${showLogout ? 'absolute right-6 top-[50px] lg:right-12' : 'hidden'}`}
+            className={`bg-purple-200 transition-all duration-300 ${showLogout ? 'absolute right-6 top-[50px] lg:right-8 md:right-8' : 'hidden'}`}
           >
             <Link 
               to="/login"

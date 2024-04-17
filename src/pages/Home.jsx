@@ -1,9 +1,10 @@
-import { Stats } from "../components"
+import { Record, Stats } from "../components"
 
 const Home = () => {
   return (
     <div>
       <Stats />
+      <Record />
     </div>
   )
 }

@@ -5,7 +5,7 @@ const StatsHeader = () => {
     <div>
       {/* mobile */}
       <div className="align-element grid grid-cols-2 gap-y-6 md:hidden">
-        <div className="tabs tabs-boxed col-span-2">
+        <div className="tabs tabs-boxed tracking-tighter col-span-2">
           <a role="tab" className="tab tab-active">Leave Requests</a>
           <a role="tab" className="tab bg-base-100">Sickness Leave</a>
         </div>

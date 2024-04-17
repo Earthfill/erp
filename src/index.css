@@ -8,7 +8,7 @@
   }
   
   .align-page {
-    @apply shadow-sm md:max-w-full rounded-md p-10 bg-white;
+    @apply shadow-sm md:max-w-full rounded-lg p-10 bg-white;
   }
 
   .page-title {

@@ -14,24 +14,21 @@
 
 import ErrorElement from './ErrorElement';
 import Filters from './Filters';
-import FormCheckbox from './FormCheckbox';
 import FormInput from './FormInput';
-import FormRange from './FormRange';
 import FormSelect from './FormSelect';
 import Loading from './Loading';
 import Navbar from './Navbar';
-import NavLinks from './NavLinks';
-import PaginationContainer from './PaginationContainer';
 import SectionTitle from './SectionTitle';
-import SearchContainer from './SearchContainer';
 import StatsContainer from './StatsContainer';
 import ChartsContainer from './ChartsContainer';
 import StatItem from './StatItem';
 import Stats from './Stats';
 import StatsHeader from './StatsHeader';
 import StatsBody from './StatsBody';
+import Record from './Record';
+import LeaveTable from './LeaveTable';
 
 export { 
-  ErrorElement, Filters, FormCheckbox, FormInput, FormRange, FormSelect, Loading, Navbar, 
-  NavLinks, PaginationContainer, SectionTitle, SearchContainer, StatsContainer, ChartsContainer, StatItem, Stats, StatsHeader, StatsBody
+  ErrorElement, Filters, FormInput, FormSelect, Loading, Navbar, SectionTitle, StatsContainer,
+  ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable
 }

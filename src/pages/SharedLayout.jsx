@@ -8,7 +8,7 @@ const SharedLayout = () => {
         <Navbar />
       </div>
 
-      <div className="2xl:max-w-full md:mx-auto md:max-w-screen-2xl md:px-12 bg-gray-100 h-screen align-element py-8">
+      <div className="">
         <Outlet />
       </div>
     </main>

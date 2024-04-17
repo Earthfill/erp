@@ -1,69 +1,29 @@
-import { Form, Link, useLoaderData } from "react-router-dom"
-import FormInput from "./FormInput"
+import { FaFilter } from "react-icons/fa"
 import FormSelect from "./FormSelect"
-import FormRange from "./FormRange";
-import FormCheckbox from "./FormCheckbox";
+import { useSelector } from "react-redux"
 
 const Filters = () => {
-  const { meta, params } = useLoaderData();
-  const { search, company, category, shipping, order, price } = params;
+  const { sortOptions } = useSelector((store) => store.leave);
 
   return (
-    <Form className="bg-base-200 rounded-md px-8 py-4 grid gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 items-center">
-      {/* SEARCH */}
-      <FormInput
-        type='search'
-        label='search product'
-        name='search'
-        size='input-sm'
-        defaultValue={search}
-      />
-      {/* CATEGORIES */}
-      <FormSelect 
-        label='select category'
-        name='category'
-        list={meta.categories}
-        size='select-sm'
-        defaultValue={category}
-      />
-      {/* COMPANIES */}
-      <FormSelect 
-        label='select company'
-        name='company'
-        list={meta.companies}
-        size='select-sm'
-        defaultValue={company}
-      />
-      {/* ORDER */}
-      <FormSelect 
-        label='sort by'
-        name='order'
-        list={['a-z', 'z-a', 'high', 'low']}
-        size='select-sm'
-        defaultValue={order}
-      />
-      {/* PRICE */}
-      <FormRange
-        name='price'
-        label='select price'
-        size='range-sm'
-        price={price}
-      />
-      {/* SHIPPING */}
-      <FormCheckbox
-        name='shipping'
-        label='free shipping'
-        size='checkbox-sm'
-        defaultValue={shipping}
-      />
-      {/* BUTTONS */}
-      <button type="submit" className="btn btn-primary btn-sm">
-        search
-      </button>
-      <Link to='/products' className="btn btn-accent btn-sm">
-        reset
-      </Link>
-    </Form>
+    <div className="align-page flex flex-col md:flex-row md:items-center gap-3">
+      <div className="flex gap-3 w-fit items-center border border-primary rounded-md p-2 text-primary">
+        <FaFilter />
+        Filters (1)
+      </div>
+      <div>
+        <label className="input input-bordered flex input-sm items-center rounded-md gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" className="w-4 h-4 opacity-70"><path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" /></svg>
+          <input type="text" className="grow"/>
+        </label>
+      </div>
+      <div className="-mt-4">
+        <FormSelect
+          list={sortOptions}
+          size='select-sm'
+        />
+      </div>
+    </div>
   )
 }
 

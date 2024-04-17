@@ -37,10 +37,10 @@ const LeaveTable = () => {
   ];
   
   return (
-    <div className="w-full md:max-w-[1950px] px-5 pb-16">
+    <div className="w-full px-5 pb-16">
       <table className="table table-zebra">
         <thead>
-          <tr className="md:text-xl">
+          <tr className="md:text-base">
             <th>Start Date</th>
             <th>End Date</th>
             <th className="text-center">Status</th>
@@ -54,7 +54,7 @@ const LeaveTable = () => {
           };
 
           return (
-            <tr className="bg-gray-50 md:text-lg">
+            <tr className="bg-gray-50 md:text-base">
               <td>{startDate}/2023</td>
               <td>{endDate}/2023</td>
               <td className="capitalize flex gap-3 items-center md:justify-center">

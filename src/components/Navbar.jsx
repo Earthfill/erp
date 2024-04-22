@@ -23,7 +23,7 @@ const Navbar = () => {
         <ul className={`${isSidebarOpen ? 'flex transition-all duration-1000 font-semibold gap-3 text-base-100' : 'hidden md:flex transition-all duration-1000 font-semibold gap-3 text-base-100'}`}>
           <li>Home</li>
           <li>Leaves</li>
-          <li>Announcements</li>
+          <li>Appraisal</li>
         </ul>
       </div>
 

@@ -27,8 +27,9 @@ import StatsHeader from './StatsHeader';
 import StatsBody from './StatsBody';
 import Record from './Record';
 import LeaveTable from './LeaveTable';
+import FormDate from './FormDate';
 
 export { 
   ErrorElement, Filters, FormInput, FormSelect, Loading, Navbar, SectionTitle, StatsContainer,
-  ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable
+  ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable, FormDate
 }

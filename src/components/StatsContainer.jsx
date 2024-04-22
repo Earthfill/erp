@@ -44,8 +44,8 @@ const StatsContainer = () => {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     arrows: false,
     responsive: [
       {
@@ -60,13 +60,7 @@ const StatsContainer = () => {
 
   return (
     <>
-      <div className="hidden md:grid md:grid-cols-2 md:gap-5">
-        {defaultStats.map((item, index) => {
-          return <StatItem key={index} {...item} />
-        })}
-      </div>
-
-      <div className="md:hidden w-64 mx-auto mt-5">
+      <div className="w-80 md:w-full mx-auto mt-5">
         <Slider {...settings}>
           {defaultStats.map((item, index) => (
             <div key={index}>

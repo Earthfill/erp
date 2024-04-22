@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux"
 import FormSelect from "./FormSelect"
+import FormDate from "./FormDate";
 import StatsContainer from "./StatsContainer";
-import { MdPeople } from "react-icons/md";
 
 const StatsBody = () => {
   const { leaveOptions, leaveTime } = useSelector((store) => store.leave);
@@ -23,27 +23,40 @@ const StatsBody = () => {
           />
         </div>
         <div className="hidden md:flex md:gap-10 md:justify-center lg:justify-center">
-          <div className="md:flex md:flex-col md:items-center md:gap-y-5 lg:justify-between">
+          <div className="md:flex md:flex-col md:items-center md:gap-y-5 lg:justify-evenly lg:-mt-10">
             <span>Leave left</span>
-            <div className="radial-progress text-primary" style={{ "--value": "80", "--size": "15rem", "--thickness": "5px" }} role="progressbar">
-                <div className="shadow-lg p-5 text-4xl text-gray-400 rounded-full">
-                  <MdPeople />  
-                </div>
-                <span className="absolute top-12 -left-3">10 days</span>
+            <div className="radial-progress text-primary border" style={{ "--value": "80", "--size": "15rem", "--thickness": "5px" }} role="progressbar">
+                <span className="absolute top-24 left-16 text-4xl">10 days</span>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-between">
+          <div className="md:flex md:flex-col md:items-center md:gap-y-5 lg:justify-evenly lg:-mt-10">
             <span>Leave used</span>
-            <div className="radial-progress text-warning" style={{ "--value": "80", "--size": "15rem", "--thickness": "5px" }} role="progressbar">
-                <div className="shadow-lg p-5 text-4xl text-gray-400 rounded-full">
-                  <MdPeople />
-                </div>
-                <span className="absolute top-12 -left-3">15 days</span>
+            <div className="radial-progress text-warning border" style={{ "--value": "45", "--size": "15rem", "--thickness": "5px" }} role="progressbar">
+                <span className="absolute top-24 left-16 text-4xl">5 days</span>
             </div>
           </div>
         </div>
       </div>
-      <StatsContainer />
+
+      <div className="flex flex-col">
+        <div className="align-page">
+          <div>
+            Start Date
+            <FormDate />
+          </div>
+          <div>
+            End Date
+            <FormDate />
+          </div>
+          <div className="flex items-center justify-between mt-4">
+            <input type="checkbox" className="toggle toggle-primary" />
+            <button className="button-style bg-primary text-white">Submit</button>
+          </div>
+        </div>
+        <div>
+          <StatsContainer />
+        </div>
+      </div>
     </div>
   )
 }

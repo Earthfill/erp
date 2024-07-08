@@ -4,7 +4,7 @@ const FormInput = ({ name, type, value, handleChange, size, labelText }) => {
       <label className="form-control">
         <div className="label">
           <span className="label-text capitalize font-semibold">
-            {labelText || name}
+            {labelText || name} <span className="text-error">*</span>
           </span>
         </div>
         <input 
@@ -12,7 +12,7 @@ const FormInput = ({ name, type, value, handleChange, size, labelText }) => {
           name={name}
           value={value}
           onChange={handleChange}
-          className={`input input-bordered input-primary ${size}`}
+          className={`input input-bordered rounded-md ${size}`}
         />
       </label>
     </div>

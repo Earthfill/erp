@@ -3,7 +3,7 @@ const FormInput = ({ name, type, value, handleChange, size, labelText }) => {
     <div>
       <label className="form-control">
         <div className="label">
-          <span className="label-text capitalize font-semibold">
+          <span className="label-text text-sm md:text-base capitalize font-semibold">
             {labelText || name} <span className="text-error">*</span>
           </span>
         </div>

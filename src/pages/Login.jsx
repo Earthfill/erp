@@ -29,7 +29,7 @@ const Login = () => {
           <h3 className="text-center text-2xl font-semibold">
             Performance Portal
           </h3>
-          <p class="text-center text-gray-400 text-sm">Input your password to login</p>
+          <p class="text-center font-normal text-gray-400 text-xs md:text-sm">Input your password to login</p>
           <div className="py-4 grid gap-4">
             <FormInput
               type='text'

@@ -12,7 +12,7 @@ const FormInput = ({ name, type, value, handleChange, size, labelText }) => {
           name={name}
           value={value}
           onChange={handleChange}
-          className={`input input-bordered rounded-md ${size}`}
+          className={`input input-bordered input-sm md:input-md rounded-md ${size}`}
         />
       </label>
     </div>

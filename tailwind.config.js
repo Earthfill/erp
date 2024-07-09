@@ -2,12 +2,7 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {
-      screens: {
-        md: "767px",
-        lg: "1025px",
-      },
-    },
+    extend: {},
   },
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
   daisyui: {

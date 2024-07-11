@@ -35,10 +35,11 @@ import Tabs from './Tabs';
 import Welcome from './Welcome';
 import DashboardCard from './DashboardCard';
 import TaskHistory from './TaskHistory';
+import PerformanceChart from './PerformanceChart';
 
 export { 
   ErrorElement, Filters, FormInput, FormSelect, Loading, Navbar, SectionTitle, StatsContainer,
   ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable, FormDate,
 
-  Tabs, Sidebar, NavLinks, Welcome, DashboardCard, TaskHistory
+  Tabs, Sidebar, NavLinks, Welcome, DashboardCard, TaskHistory, PerformanceChart
 }

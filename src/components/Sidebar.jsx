@@ -4,7 +4,7 @@ import NavLinks from "./NavLinks";
 
 const Sidebar = () => {
   return (
-    <div className="flex flex-col items-center space-y-5 p-5 border-r">
+    <div className="flex flex-col items-center space-y-5 p-5 border-r min-h-screen h-full">
       <img src={brandName} alt="access bank" className="mx-auto" />
       <div className="avatar">
         <div className="w-24 rounded-full">

@@ -11,7 +11,7 @@ const Welcome = () => {
       <div className="font-normal text-lg text-blue-900">
         Your last Appraisal Score was
         <span class="ml-5 bg-orange-400 text-base-100 text-2xl p-5 font-bold rotate-12 mask mask-hexagon-2">
-          56%
+          85%
         </span>
       </div>
     </div>

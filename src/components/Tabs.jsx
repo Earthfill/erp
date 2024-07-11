@@ -13,7 +13,7 @@ const Tabs = ({ tabs, size, children }) => {
           <button
             key={index}
             onClick={() => setOpenTab(index)}
-            className={`flex-1 py-2 px-4 rounded-md focus:outline-none transition-all duration-300 ${
+            className={`flex-1 py-2 px-4 lg:text-xs 2zl:text-base rounded-md focus:outline-none transition-all duration-300 ${
               openTab === index ? "bg-blue-900 text-white" : ""
             }`}
           >

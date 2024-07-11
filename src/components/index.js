@@ -34,10 +34,11 @@ import NavLinks from './NavLinks';
 import Tabs from './Tabs';
 import Welcome from './Welcome';
 import DashboardCard from './DashboardCard';
+import TaskHistory from './TaskHistory';
 
 export { 
   ErrorElement, Filters, FormInput, FormSelect, Loading, Navbar, SectionTitle, StatsContainer,
   ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable, FormDate,
 
-  Tabs, Sidebar, NavLinks, Welcome, DashboardCard
+  Tabs, Sidebar, NavLinks, Welcome, DashboardCard, TaskHistory
 }

@@ -1,14 +1,13 @@
 import { Outlet } from "react-router-dom"
-import { Navbar } from "../components"
+import { Sidebar } from "../components"
 
 const SharedLayout = () => {
   return (
-    <main>
+    <main className="flex">
       <div>
-        <Navbar />
+        <Sidebar />
       </div>
-
-      <div className="">
+      <div className="flex-1 align-element">
         <Outlet />
       </div>
     </main>

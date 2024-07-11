@@ -16,6 +16,7 @@ function App() {
           <Route index element={<Home />} />
         </Route>
         <Route path='login' element={<Login />} />
+        <Route path='' element={<Login />} />
         <Route path='*' element={<Error />} />
       </Routes>
     </BrowserRouter>

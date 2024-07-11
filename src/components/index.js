@@ -29,7 +29,15 @@ import Record from './Record';
 import LeaveTable from './LeaveTable';
 import FormDate from './FormDate';
 
+import Sidebar from './Sidebar';
+import NavLinks from './NavLinks';
+import Tabs from './Tabs';
+import Welcome from './Welcome';
+import DashboardCard from './DashboardCard';
+
 export { 
   ErrorElement, Filters, FormInput, FormSelect, Loading, Navbar, SectionTitle, StatsContainer,
-  ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable, FormDate
+  ChartsContainer, StatItem, Stats, StatsHeader, StatsBody, Record, LeaveTable, FormDate,
+
+  Tabs, Sidebar, NavLinks, Welcome, DashboardCard
 }

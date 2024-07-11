@@ -4,7 +4,7 @@
 
 @layer components {
   .align-element {
-    @apply mx-auto max-w-7xl px-7;
+    @apply mx-auto md:max-w-7xl 2xl:max-w-full px-7;
   }
   
   .align-page {
@@ -20,14 +20,6 @@
   }
 
   .button-style {
-    @apply py-3 rounded-md w-full capitalize bg-blue-900 text-white;
+    @apply py-3 rounded-md w-full capitalize bg-blue-900 hover:bg-blue-800 text-white;
   }
-}
-
-body {
-  font-weight: 600;
-}
-
-#login {
-
 }
